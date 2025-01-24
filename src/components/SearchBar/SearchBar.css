@@ -1,0 +1,61 @@
+/* Estilo geral da barra de busca */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5; /* Fundo cinza claro */
+    border: 1px solid #d9d9d9; /* Bordas sutis */
+    border-radius: 25px; /* Bordas arredondadas */
+    padding: 5px 15px; /* Diminuindo o padding para reduzir a grossura */
+    width: 500px; /* Largura fixa */
+    max-width: 100%; /* Responsivo para telas menores */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: box-shadow 0.3s ease, border 0.3s ease;
+  }
+  
+  /* Estilo do input */
+  .search-input {
+    flex: 1; /* Ocupar espaço disponível */
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px; /* Diminui o tamanho da fonte para mais elegância */
+    padding: 8px 10px; /* Reduzindo o padding do input */
+    color: #333; /* Texto em cinza escuro */
+  }
+  
+  /* Placeholder do input */
+  .search-input::placeholder {
+    color: #888; /* Placeholder em cinza suave */
+  }
+  
+  /* Ícone de lupa */
+  .search-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: 10px; /* Espaçamento à esquerda */
+    filter: invert(40%); /* Cor suave para o ícone */
+    transition: transform 0.2s ease; /* Animação ao passar o mouse */
+  }
+  
+  /* Efeito ao passar o mouse sobre a barra */
+  .search-bar:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Realce na sombra */
+    border: 1px solid #007bff; /* Borda azul clara */
+  }
+  
+  /* Efeito ao clicar no ícone de lupa */
+  .search-icon:active {
+    transform: scale(1.1); /* Ampliação leve ao clicar */
+  }
+  .grid-container {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .grid-container.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  

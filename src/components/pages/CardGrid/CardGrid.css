@@ -1,0 +1,137 @@
+.scrollable-container {
+  max-height: 70vh; /* Define a altura máxima da área visível */
+  overflow-y: auto; /* Ativa a rolagem vertical */
+  padding-right: 10px; /* Adiciona espaço para o scrollbar */
+}
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.grid-card {
+  position: relative;
+  width: 200px;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.grid-card:hover {
+  transform: scale(1.05);
+}
+
+.grid-card-image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.grid-card-title {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.favorite-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: red;
+  cursor: pointer;
+}
+
+.favorite-icon:hover {
+  transform: scale(1.2);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.favorites-container {
+  margin-top: 20px;
+}
+
+.remove-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: #ff0000;
+  cursor: pointer;
+}
+
+.remove-icon:hover {
+  transform: scale(1.2);
+}
+
+/* 
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(5, auto); 
+    gap: 20px; 
+    padding: 20px;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .grid-card {
+    position: relative;
+    width: 100%;
+    max-width: 200px; 
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #222; 
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+  
+  .grid-card:hover {
+    transform: scale(1.05); 
+  }
+  
+  .grid-card-image {
+    width: 100%;
+    height: 300px; 
+    object-fit: cover; 
+    border-radius: 4px;
+  }
+  
+  .grid-card-title {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    max-width: calc(100% - 20px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+   */

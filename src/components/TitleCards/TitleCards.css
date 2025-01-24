@@ -1,0 +1,89 @@
+.title-cards {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.title-cards h2 {
+    margin-bottom: 8px;
+}
+
+.card-list {
+    display: flex;
+    gap: 10px;
+    overflow: scroll;
+    padding: 10px 0; /* Adiciona um espaçamento vertical */
+}
+
+.card-list::-webkit-scrollbar {
+    display: none;
+}
+
+.card-list .card {
+    position: relative; /* Necessário para posicionar o texto */
+    width: 280px; /* Define a largura do card */
+    /* height: 360px; Define a altura do card */
+    border-radius: 4px;
+    overflow: hidden; /* Garante que o conteúdo não vaze fora do card */
+    cursor: pointer;
+    flex-shrink: 0; /* Impede que os cards diminuam ao redimensionar */
+    background-color: #222; /* Fundo visível enquanto a imagem carrega */
+}
+
+.card-list img {
+    width: 100%; /* Garante que a imagem ocupe a largura total do card */
+    height: 100%; /* Faz a imagem preencher o card verticalmente */
+    object-fit: cover; /* Ajusta a imagem para cobrir todo o card */
+    border-radius: 4px;
+}
+
+.card-list .card p {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    /* background-color: rgba(0, 0, 0, 0.7); Fundo escuro semitransparente */
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    max-width: calc(100% - 20px);
+    overflow: hidden; /* Impede que o texto vaze */
+    text-overflow: ellipsis; /* Adiciona "..." ao texto longo */
+    white-space: nowrap; /* Mantém o texto em uma única linha */
+}
+@media(max-width:800px){
+    .title-cards{
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+    .title-cards h2{
+        font-size: 20px;
+
+    }
+    .card{
+        width: 200px;
+    }
+    .card-list .card img{
+        width: 200px;
+    }
+    .card-list p{
+        font-size: 12px;
+    }
+}
+@media(max-width:500px){
+   
+    .title-cards h2{
+        font-size: 15px;
+
+    }
+    .card{
+        width: 165px;
+    }
+
+    .card-list img{
+        width: 165px;
+    }
+    .card-list p{
+        font-size: 10px;
+    }
+}
+
